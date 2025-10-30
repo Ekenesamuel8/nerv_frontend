@@ -12,19 +12,23 @@ export default function Navbar() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center px-8 py-6 fixed top-0 w-full bg-transparent z-50">
+    <nav className="flex justify-between items-center px-8 py-6 fixed top-0 w-full bg-transparent z-50 border-b border-gray-800 pb-2 ">
       <div className="flex justify-between items-center gap-8">
         <h1 className="text-2xl font-bold text-white">NERV</h1>
 
         <ul className="flex gap-8 text-gray-300 text-sm font-medium px-4">
-          <li className="hover:text-indigo-500 cursor-pointer px-2">Home</li>
+          <Link href="/">
+            <li className="hover:text-indigo-500 cursor-pointer px-2">Home</li>
+          </Link>
           <Link href="/discovery">
             <li className="hover:text-indigo-500 cursor-pointer px-2">Game</li>
           </Link>
           <li className="hover:text-indigo-500 cursor-pointer px-2">Developers</li>
           <li className="hover:text-indigo-500 cursor-pointer px-2">Live</li>
           <li className="hover:text-indigo-500 cursor-pointer px-2">Explore</li>
-          <li className="hover:text-indigo-500 cursor-pointer px-2">Leaderboard</li>
+          <Link href="/games/leaderboard">
+            <li className="hover:text-indigo-500 cursor-pointer px-2">Leaderboard</li>
+          </Link>
         </ul>
       </div>
 
@@ -47,7 +51,7 @@ export default function Navbar() {
         {/* Modal Component */}
         <ConnectModal isOpen={showModal} onClose={() => setShowModal(false)} />
         <Link
-            href="#"
+            href="/profile"
             type="button"
             className="hover:text-gray-600 rounded-full bg-white space-x-4"
           >
