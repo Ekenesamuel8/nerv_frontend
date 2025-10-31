@@ -10,14 +10,13 @@ import Link from "next/dist/client/link";
 
 export default function Navbar() {
   const [showModal, setShowModal] = useState(false);
-
   return (
     <nav className="flex justify-between items-center px-8 py-6 fixed top-0 w-full bg-transparent z-50 border-b border-gray-800 pb-2 ">
       <div className="flex justify-between items-center gap-8">
         <h1 className="text-2xl font-bold text-white">NERV</h1>
 
         <ul className="flex gap-8 text-gray-300 text-sm font-medium px-4">
-          <Link href="/">
+          <Link href="/dashboard">
             <li className="hover:text-indigo-500 cursor-pointer px-2">Home</li>
           </Link>
           <Link href="/discovery">

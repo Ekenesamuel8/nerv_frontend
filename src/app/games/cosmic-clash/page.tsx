@@ -29,7 +29,7 @@ export default function CosmicClash() {
         <img
           src="/images/game1.jpg"
           alt="Cosmic Clash Banner"
-          className="w-full object-cover "
+          className="w-full object-cover h-160"
         />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -38,25 +38,30 @@ export default function CosmicClash() {
 
           {/* About */}
           <div>
-            <h2 className="text-xl font-semibold mb-2 text-white">
+            <h2 className="text-2xl font-semibold mb-2 text-white">
               About Cosmic Clash
             </h2>
             <p className="text-gray-400 leading-relaxed">
-              In a universe where strength is everything, challengers rise for glory.
-              Master your skills, form alliances, and battle through cosmic realms to
-              claim your place among legends.
+              In a future where technology has outpaced control, the 
+              world stands on the edge of collapse. Nations have fallen, 
+              corporations rule the skies, and the line between man and machine 
+              has all but disappeared. From the ruins of old civilizations, new 
+              factions rise each armed with advanced tech, augmented warriors, and 
+              an unrelenting thirst for power.
             </p>
           </div>
 
           {/* Developer Notes */}
           <div>
-            <h2 className="text-xl font-semibold mb-2 text-white">
+            <h2 className="text-2xl font-semibold mb-2 text-white">
               Developer Notes
             </h2>
             <p className="text-gray-400 leading-relaxed">
-              We’re working to enhance battle mechanics, visuals, and balance across
-              classes. Future updates will focus on expanding co-op modes and refining
-              the AI of key bosses.
+              We set out to create a world where technology, power, and human 
+              resilience collide. Every element of this game  from its visuals to 
+              its combat systems  was built to immerse players in a fast-paced, 
+              high-stakes universe. Thank you for being part of this experience and 
+              for helping shape the future of our world through your gameplay.
             </p>
           </div>
 
@@ -113,7 +118,7 @@ export default function CosmicClash() {
           {/* Playtest */}
           <div className="bg-gray-900 rounded-xl p-5">
             <h3 className="text-white font-semibold mb-3">Game Status / Playtest</h3>
-            <Button className="w-full bg-purple-600 hover:bg-purple-700 mb-2">
+            <Button className="w-full bg-ash-600 hover:bg-purple-700 mb-2">
               Join Test
             </Button>
             <Button variant="primary" className="w-full text-gray-400 border-gray-700">
