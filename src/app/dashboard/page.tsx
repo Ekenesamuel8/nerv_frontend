@@ -1,7 +1,7 @@
 "use client";
 
-import Navbar from "@/components/navbar";
-import { Button } from "@/components/ui/button";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from "framer-motion";
 import Link from "next/dist/client/link";
 
@@ -33,7 +33,7 @@ const games = [
       }}
     >
       {/* Hero Section */}
-      <div className="px-8 md:px-20 py-15 pt-25">
+      <div className="px-8 md:px-20 py-10 pt-23 md:mr-100 lg:mr-195">
         <div className="bg-transparent backdrop-blur-xs border border-gray-500 text-center p-3 rounded-full max-w-xs mt-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -49,10 +49,10 @@ const games = [
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="text-3xl md:text-5xl font-extrabold leading-tight"
+          className="text-3xl md:text-5xl leading-tight font-heading tracking-wider"
         >
           <div className="flex mt-2">
-            <div className="rounded-md w-2 h-15 bg-gradient-to-b from-gray-300 to-gray-300 mr-1"></div>
+            <div className="rounded-md w-2 h-8 lg:h-15 md:h-15 bg-gradient-to-b from-gray-300 to-gray-300 mr-1"></div>
             <span>Play, Test </span>
           </div>
           <span>Rule the Game</span>
@@ -65,11 +65,11 @@ const games = [
         </p>
 
         <div className="flex gap-4 mt-4">
-          <div className="bg-transparent backdrop-blur-xs border border-gray-500 text-center p-3 px-3 rounded-xl max-w-xs hover:bg-indigo-700 ">
+          <div className="flex-1 bg-transparent backdrop-blur-xs border border-gray-500 text-center p-2 px-2 lg:p-3 lg:px-3 rounded-xl hover:bg-indigo-700 ">
             <Link href="#" className="uppercase tracking-wider text-white text-sm">Enter Arena</Link>
           </div>
-          <div className="bg-transparent backdrop-blur-xs border border-gray-500 text-center p-3 rounded-xl max-w-xs hover:bg-indigo-700">
-            <div className="uppercase tracking-wider text-white text-sm">Add Game</div>
+          <div className="flex-1 bg-transparent backdrop-blur-xs border border-gray-500 text-center p-3 rounded-xl hover:bg-indigo-700">
+            <Link href="/developerforgame" className="uppercase tracking-wider text-white text-sm">Add Game</Link>
           </div>
         </div>
       </div>
@@ -96,9 +96,12 @@ const games = [
               <div className="px-4 w-50 bottom-4 left-4">
                 <h3 className="text-xs font-semibold uppercase">{game.title}</h3><br />
                 <p className="text-[0.625rem] text-gray-300 uppercase">{game.discription}</p><br />
-                <div className="text-[0.625rem] flex justify-between">
-                  <p>gh</p>
-                  <p>EXPLORE</p>
+                <div className="text-[0.625rem] flex justify-between items-center">
+                  <div className="flex gap-2">
+                    <FontAwesomeIcon icon={faHeart} />
+                    <p>1.3k</p>
+                  </div>
+                  <p className="underline">EXPLORE</p>
                 </div>
               </div>
             </div>

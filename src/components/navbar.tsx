@@ -22,7 +22,9 @@ export default function Navbar() {
           <Link href="/discovery">
             <li className="hover:text-indigo-500 cursor-pointer px-2">Game</li>
           </Link>
-          <li className="hover:text-indigo-500 cursor-pointer px-2">Developers</li>
+          <Link href="/developer">
+            <li className="hover:text-indigo-500 cursor-pointer px-2">Developers</li>
+          </Link>
           <li className="hover:text-indigo-500 cursor-pointer px-2">Live</li>
           <li className="hover:text-indigo-500 cursor-pointer px-2">Explore</li>
           <Link href="/games/leaderboard">
