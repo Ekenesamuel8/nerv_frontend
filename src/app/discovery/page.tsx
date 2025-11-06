@@ -77,7 +77,7 @@ export default function DiscoveryPlaytest() {
 
   return (
     <div className="min-h-screen bg-black text-white px-6 md:px-10 py-16 pt-32">
-      <h1 className="text-3xl font-bold mb-2">Discovery Playtest</h1>
+      <h1 className="text-3xl font-fancy mb-2">Discovery Playtest</h1>
 
       {/* Category Filters */}
       <div className="flex flex-wrap gap-3 mb-5">

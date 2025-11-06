@@ -21,7 +21,7 @@ export default function Leaderboard() {
       <button className="text-sm text-gray-400 hover:text-white mb-10">&larr; Back</button>
 
       <div>
-        <h1 className="text-3xl font-bold mb-1">Leaderboard</h1>
+        <h1 className="text-3xl font-fancy mb-1">Leaderboard</h1>
         <p className="text-gray-400 mb-8">Compete with your fellow players and rack up points.</p>
 
         {/* Header Row */}

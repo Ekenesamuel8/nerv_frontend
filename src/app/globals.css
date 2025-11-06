@@ -28,7 +28,9 @@
   font-family: var(--font-erica-one);
 }
 
-
+.font-fancy {
+  font-family: var(--font-federant);
+}
 
 body {
   background: var(--background);

@@ -7,7 +7,7 @@ export default function CosmicClash() {
     <div className="min-h-screen bg-black text-gray-300 px-6 md:px-20 py-10 pt-32">
       {/* Header Section */}
       <header className="mb-8">
-        <h1 className="text-3xl font-bold text-white">Cosmic Clash</h1>
+        <h1 className="text-3xl font-fancy text-white">Cosmic Clash</h1>
         <p className="text-sm text-gray-500 my-1">
           By <span className="text-white">NERV Studios</span> • Genre: <span className="text-white">Action RPG</span>
         </p>

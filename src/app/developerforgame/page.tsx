@@ -21,7 +21,7 @@ export default function RegisterGamePage() {
 
   return (
     <section className="min-h-screen bg-black text-white px-6 md:px-20 py-16 pt-32">
-      <h1 className="font-erica text-4xl mb-2">Register Your Game</h1>
+      <h1 className="font-fancy text-4xl mb-2">Register Your Game</h1>
       <p className="text-gray-400 mb-10">
         Submit your game to our platform. It’s fast and easy.
       </p>
