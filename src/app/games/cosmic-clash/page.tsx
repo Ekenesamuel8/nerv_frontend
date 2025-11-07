@@ -15,10 +15,10 @@ export default function CosmicClash() {
 
         {/* Tabs */}
         <div className="flex gap-12 mt-9 text-sm">
-          <button className="text-white border-b-2 border-white pb-1 px-2">
+          <button className="text-white pb-1 px-2">
             Overview
           </button>
-          <button className="hover:text-white">Leaderboards</button>
+          <Link href="/games/cosmic-clash/leaderboard" className="hover:text-white">Leaderboards</Link>
           <button className="hover:text-white">Quests</button>
           <button className="hover:text-white">Patch Info</button>
         </div>
