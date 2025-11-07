@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function CosmicClash() {
   return (
@@ -38,7 +39,7 @@ export default function CosmicClash() {
 
           {/* About */}
           <div>
-            <h2 className="text-2xl font-semibold mb-2 text-white">
+            <h2 className="text-2xl font-fancy mb-2 text-white">
               About Cosmic Clash
             </h2>
             <p className="text-gray-400 leading-relaxed">
@@ -87,9 +88,9 @@ export default function CosmicClash() {
               <p className="mb-2 text-gray-400 text-sm">Write a review</p>
               <textarea
                 placeholder="Share your thoughts..."
-                className="w-full p-3 rounded-lg bg-black border border-gray-700 text-gray-300 focus:ring-2 focus:ring-purple-500 outline-none resize-none"
+                className="w-full p-3 rounded-lg bg-black border border-gray-700 text-gray-300 focus:ring-2 focus:ring-indigo-500 outline-none resize-none"
               ></textarea>
-              <Button className="mt-3 bg-purple-600 hover:bg-purple-700 text-sm">
+              <Button className="mt-3 bg-indigo-600 hover:bg-indigo-700 text-sm">
                 Submit Review
               </Button>
             </div>
@@ -117,18 +118,22 @@ export default function CosmicClash() {
         <aside className="space-y-6">
           {/* Playtest */}
           <div className="bg-gray-900 rounded-xl p-5">
-            <h3 className="text-white font-semibold mb-3">Game Status / Playtest</h3>
-            <Button className="w-full bg-ash-600 hover:bg-purple-700 mb-2">
+            <h3 className="text-white font-semibold mb-3 text-center text-lg">Game Status:Playtest</h3>
+            <div className="w-full bg-ash-600 bg-black h-9 mb-2 text-center text-white">
               Join Test
-            </Button>
-            <Button variant="primary" className="w-full text-gray-400 border-gray-700">
-              Re-test
-            </Button>
+            </div>
+            <div className="w-full text-gray-400 border-gray-700 text-center hover:text-white">
+              Feedback
+            </div>
           </div>
 
           {/* Feedback */}
           <div className="bg-gray-900 rounded-xl p-5">
-            <h3 className="text-white font-semibold mb-3">Bug Tracker & Feedback</h3>
+            <h2 className="text-white font-semibold mb-3 text-center text-lg">Bug Tracker $ Feedback</h2>
+            <textarea
+                placeholder="Describe the bug or feedback"
+                className="w-full p-2 rounded-lg bg-black border border-gray-700 text-gray-300 focus:ring-2 focus:ring-indigo-500 outline-none resize-none"
+              ></textarea>
             <Button
               variant="primary"
               className="w-full text-gray-400 border-gray-700 hover:text-white"
@@ -148,7 +153,7 @@ export default function CosmicClash() {
           {/* Community */}
           <div className="bg-gray-900 rounded-xl p-5">
             <h3 className="text-white font-semibold mb-2">Community</h3>
-            <Button className="w-full bg-purple-600 hover:bg-purple-700">
+            <Button className="w-full bg-indigo-600 hover:bg-indigo-700">
               Join Discussion
             </Button>
           </div>
