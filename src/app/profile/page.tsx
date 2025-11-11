@@ -135,7 +135,7 @@ export default function ProfilePage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-neutral-900 rounded-xl p-4 flex gap-3 items-start"
               >
-                <div className="bg-purple-600 p-2 rounded-lg">
+                <div className="bg-indigo-600 p-2 rounded-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4 text-white"

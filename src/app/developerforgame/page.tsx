@@ -64,7 +64,7 @@ export default function RegisterGamePage() {
             <div className="space-y-2">
               {["Pc", "Mobile", "Mac", "Linux"].map((platform) => (
                 <label key={platform} className="flex items-center space-x-2">
-                  <input type="checkbox" className="accent-purple-600" />
+                  <input type="checkbox" className="accent-indigo-600" />
                   <span>{platform}</span>
                 </label>
               ))}
@@ -99,10 +99,10 @@ export default function RegisterGamePage() {
               </button>
             </div>
           ) : (
-            <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-zinc-700 rounded-md cursor-pointer hover:border-purple-500 transition">
+            <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-zinc-700 rounded-md cursor-pointer hover:border-indigo-600 transition">
                     <FontAwesomeIcon icon={faHeart} />
               <p className="text-gray-400 text-sm">
-                Drag and drop your file here or <span className="text-purple-500">browse</span>
+                Drag and drop your file here or <span className="text-indigo-600">browse</span>
               </p>
               <input type="file" accept="video/*" className="hidden" onChange={handleVideoChange} />
             </label>
@@ -128,10 +128,10 @@ export default function RegisterGamePage() {
               </button>
             </div>
           ) : (
-            <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-zinc-700 rounded-md cursor-pointer hover:border-purple-500 transition">
+            <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-zinc-700 rounded-md cursor-pointer hover:border-indigo-600 transition">
                     <FontAwesomeIcon icon={faHeart} />
               <p className="text-gray-400 text-sm">
-                Drag and drop your file here or <span className="text-purple-500">browse</span>
+                Drag and drop your file here or <span className="text-indigo-600">browse</span>
               </p>
               <input type="file" accept="image/*" className="hidden" onChange={handleLogoChange} />
             </label>
@@ -148,7 +148,7 @@ export default function RegisterGamePage() {
           </button>
           <button
             type="submit"
-            className="px-6 py-2 rounded-md bg-purple-600 hover:bg-purple-700 transition"
+            className="px-6 py-2 rounded-md bg-indigo-600 hover:bg-indigo-700 transition"
           >
             Submit
           </button>

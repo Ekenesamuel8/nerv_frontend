@@ -10,6 +10,7 @@ import Link from "next/dist/client/link";
 
 export default function Navbar() {
   const [showModal, setShowModal] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <nav className="flex justify-between items-center px-8 py-6 fixed top-0 w-full bg-transparent z-50 border-b border-gray-800 pb-2 ">
       <div className="flex justify-between items-center gap-8">
@@ -29,9 +30,29 @@ export default function Navbar() {
             <li className="hover:text-indigo-500 cursor-pointer px-2">Live</li>
           </Link>
           <li className="hover:text-indigo-500 cursor-pointer px-2">Explore</li>
-          <Link href="/games/leaderboard">
-            <li className="hover:text-indigo-500 cursor-pointer px-2">Leaderboard</li>
-          </Link>
+          <div
+            className="relative inline-block text-left group"
+            onMouseEnter={() => setOpen(true)}
+            onMouseLeave={() => setOpen(false)}
+          >
+            <li 
+              onClick={() => setOpen(!open)}
+              className="hover:text-indigo-500 cursor-pointer px-2">
+                Leaderboard
+            </li>
+              {open && (
+              <div className="absolute w-55 bg-black/40 rounded shadow-lg z-10">
+                <ul className="py-1">
+                  <Link href="/leaderboard">
+                    <li className="px-4 py-2 hover:bg-indigo-600 cursor-pointer">Leaderboard</li>
+                  </Link>
+                  <Link href="/leaderboard/gamerleaderboard">
+                    <li className="px-4 py-2 hover:bg-indigo-600 cursor-pointer">Gamers Leaderboard</li>
+                  </Link>
+                </ul>
+              </div>
+            )}
+          </div>
         </ul>
       </div>
 
