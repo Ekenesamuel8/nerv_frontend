@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function RegisterGamePage() {
@@ -100,11 +101,11 @@ export default function RegisterGamePage() {
             </div>
           ) : (
             <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-zinc-700 rounded-md cursor-pointer hover:border-indigo-600 transition">
-                    <FontAwesomeIcon icon={faHeart} />
+                    <FontAwesomeIcon icon={faCloudArrowUp} />
               <p className="text-gray-400 text-sm">
                 Drag and drop your file here or <span className="text-indigo-600">browse</span>
               </p>
-              <input type="file" accept="video/*" className="hidden" onChange={handleVideoChange} />
+              <input type="file" className="hidden" onChange={handleVideoChange} />
             </label>
           )}
         </div>
@@ -129,11 +130,11 @@ export default function RegisterGamePage() {
             </div>
           ) : (
             <label className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-zinc-700 rounded-md cursor-pointer hover:border-indigo-600 transition">
-                    <FontAwesomeIcon icon={faHeart} />
+                    <FontAwesomeIcon icon={faCloudArrowUp} />
               <p className="text-gray-400 text-sm">
                 Drag and drop your file here or <span className="text-indigo-600">browse</span>
               </p>
-              <input type="file" accept="image/*" className="hidden" onChange={handleLogoChange} />
+              <input type="file" className="hidden" onChange={handleLogoChange} />
             </label>
           )}
         </div>
