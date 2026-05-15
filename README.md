@@ -1,36 +1,187 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NERV Frontend
 
-## Getting Started
+NERV is a Web3 gaming frontend built with Next.js. The app is designed around a gaming arena experience where players can discover games, join playtests, view leaderboards, manage a profile, explore live sessions, and where developers can submit games or request support.
 
-First, run the development server:
+At its current stage, this repository is primarily a frontend prototype. The product surface is already mapped out across multiple routes and UI flows, but most data is still hardcoded and there is little backend or blockchain integration wired in yet.
+
+## Overview
+
+The app presents NERV as a platform for:
+
+- discovering early-stage Web3 games
+- joining playtests and viewing game details
+- tracking gamer and game leaderboards
+- viewing a player profile and progress
+- exploring live streaming style interactions
+- submitting games and developer support requests
+
+This makes the project useful both as:
+
+- a product prototype for the NERV platform
+- a UI foundation for future backend and wallet integration
+
+## Current State
+
+This codebase is mostly frontend.
+
+What is already in place:
+
+- multi-page Next.js app using the App Router
+- polished gaming-themed UI with Tailwind styling
+- motion and transitions using Framer Motion
+- signup, login, password reset, dashboard, discovery, profile, leaderboard, live, and developer flows
+- local interactive components such as modals, chat, file upload previews, and media device controls
+
+What is not meaningfully connected yet:
+
+- no real authentication flow
+- no persistent backend or database integration
+- no API-driven content loading
+- no production wallet integration
+- no blockchain transaction logic
+- no real live-streaming backend
+
+In short: this repository currently behaves more like a working product mockup than a fully connected production app.
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- Lucide React
+- Font Awesome
+
+## Main Routes
+
+These are the key user-facing routes currently present in the app:
+
+- `/`
+  Signup-style landing page
+- `/login`
+  Login screen
+- `/passwordreset`
+  Password reset flow
+- `/dashboard`
+  Main gamer landing page
+- `/discovery`
+  Game discovery and playtest listing
+- `/games/[slug]`
+  Dynamic game route
+- `/games/cosmic-clash`
+  Implemented game detail page
+- `/games/cosmic-clash/leaderboard`
+  Game-specific leaderboard
+- `/leaderboard`
+  General leaderboard
+- `/leaderboard/gamerleaderboard`
+  Games leaderboard page
+- `/profile`
+  Player profile and notifications
+- `/ongoing-live`
+  Ongoing live sessions list
+- `/ongoing-live/live`
+  Local live session preview and interaction page
+- `/developer`
+  Developer support form
+- `/developerforgame`
+  Game registration form
+
+## Notable Features
+
+### Player-facing
+
+- dashboard hero and featured game cards
+- discovery page with categories and game states
+- game detail page for `cosmic-clash`
+- player profile with stats, testing progress, and notifications
+- leaderboard screens for players and games
+
+### Live experience
+
+- local camera preview
+- local screen sharing preview
+- mic toggle
+- fake viewer count and tipping state
+- local chat sidebar
+
+Note: the live experience currently uses browser media APIs for local preview only. It is not connected to a real streaming service.
+
+### Developer-facing
+
+- developer support request form
+- game registration form
+- local asset preview for uploads
+
+## Project Structure
+
+```text
+nerv_frontend/
+├─ public/                 # Static assets and images
+├─ src/
+│  ├─ app/                 # App Router pages
+│  ├─ components/          # Shared UI and feature components
+│  └─ lib/                 # Small utilities
+├─ package.json
+└─ README.md
+```
+
+Important folders:
+
+- `src/app`
+  Route pages and layout
+- `src/components`
+  Navbar, modals, chat UI, buttons, and shared pieces
+- `public/images`
+  Game and branding visuals used across the interface
+
+## Running Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+- `npm run dev` - start the development server with Turbopack
+- `npm run build` - create a production build with Turbopack
+- `npm run start` - run the production build
 
-To learn more about Next.js, take a look at the following resources:
+## Known Limitations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- most page content is hardcoded in component files
+- form submissions are mostly placeholder behavior
+- wallet connection is currently modal-only UI
+- only `cosmic-clash` has a real game detail implementation
+- some navigation actions are presentational rather than fully wired
+- some copy/text encoding issues are still present in the UI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Good Next Steps
 
-## Deploy on Vercel
+If this project is moving toward production, the next logical steps would be:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. add a real backend or BaaS for authentication and content
+2. connect discovery, leaderboards, profiles, and game pages to real data
+3. integrate wallet support with a proper Web3 client
+4. replace mock live functionality with real streaming or realtime infrastructure
+5. centralize data models instead of keeping mock arrays inside pages
+6. add validation, error states, and test coverage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Summary
+
+NERV Frontend is a strong UI-first foundation for a Web3 gaming platform. It already communicates the product vision clearly and covers many of the major user journeys, even though most of the logic is still frontend-only.
