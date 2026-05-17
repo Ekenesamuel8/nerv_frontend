@@ -1,49 +1,137 @@
 # NERV Frontend
 
-NERV is a Web3 gaming frontend built with Next.js. The app is designed around a gaming arena experience where players can discover games, join playtests, view leaderboards, manage a profile, explore live sessions, and where developers can submit games or request support.
+NERV is a next-generation Web3 gaming platform built with Next.js and designed to expand interactive gaming experiences within the Stellar ecosystem through Soroban smart contracts, decentralized identity, wallet interoperability, community-driven playtesting, and on-chain gaming engagement.
 
-At its current stage, this repository is primarily a frontend prototype. The product surface is already mapped out across multiple routes and UI flows, but most data is still hardcoded and there is little backend or blockchain integration wired in yet.
+The platform is centered around a gaming arena experience where players can:
 
-## Overview
+- discover emerging Web3 games
+- participate in playtests
+- compete on leaderboards
+- build on-chain gaming reputation
+- engage in live gaming sessions
+- interact with developers
+- earn ecosystem-based incentives
 
-The app presents NERV as a platform for:
+For developers, NERV provides infrastructure and onboarding pathways for publishing games, managing communities, and integrating Stellar-powered gaming mechanics.
+
+At its current stage, this repository is primarily a frontend prototype. The application surface and user flows are already mapped out, while backend systems, Soroban integrations, and decentralized infrastructure are planned for future implementation.
+
+---
+
+# Why NERV Matters to Stellar
+
+NERV is designed to help expand the practical adoption of the :contentReference[oaicite:0]{index=0} ecosystem by creating developer-friendly and user-accessible gaming infrastructure powered by Stellar technologies.
+
+The platform aims to contribute to the Stellar ecosystem through:
+
+- increasing real-world Soroban use cases in gaming
+- providing reusable frontend patterns for Stellar dApps
+- onboarding new developers into Stellar gaming infrastructure
+- enabling wallet-connected gaming experiences
+- supporting decentralized reputation and reward systems
+- creating open-source reference implementations for Web3 gaming platforms
+- improving ecosystem accessibility for both gamers and developers
+
+As the project evolves, NERV is intended to become a production-grade reference architecture for building gaming experiences on Stellar and Soroban.
+
+---
+
+# Vision
+
+NERV aims to become a community-driven gaming ecosystem where:
+
+- players own their gaming identity
+- rewards and achievements become portable on-chain assets
+- developers can launch games with integrated wallet experiences
+- leaderboards and tournament systems can leverage Soroban smart contracts
+- playtesting participation can be transparently tracked and rewarded
+- gaming communities can grow around decentralized infrastructure
+
+The long-term vision aligns with Stellar’s broader mission of accessible, scalable, and developer-friendly blockchain infrastructure.
+
+---
+
+# Current State
+
+This codebase is currently frontend-focused.
+
+## What is Already Implemented
+
+- Multi-page Next.js application using the App Router
+- Gaming-themed responsive UI using Tailwind CSS
+- Interactive animations powered by Framer Motion
+- Authentication-style flows
+- Dashboard and discovery experiences
+- Leaderboards and player profile interfaces
+- Live-session UI interactions
+- Developer onboarding flows
+- Local interactive features such as:
+  - modals
+  - local media controls
+  - file upload previews
+  - chat interfaces
+
+---
+
+## What is Planned for Future Stellar Integration
+
+The next phase of development is intended to introduce deep Stellar ecosystem integration, including:
+
+### Soroban Smart Contracts
+
+Potential use cases include:
+
+- on-chain tournament systems
+- decentralized leaderboards
+- achievement verification
+- reward distribution
+- playtest participation tracking
+- NFT-style gaming achievements
+- developer payout infrastructure
+
+### Stellar Wallet Integration
+
+Planned integrations may include:
+
+- Freighter Wallet
+- WalletKit
+- Stellar account abstraction patterns
+- seamless gamer onboarding
+- transaction signing flows
+
+### Ecosystem Infrastructure
+
+Future backend work may include:
+
+- realtime multiplayer coordination
+- persistent gamer profiles
+- decentralized asset ownership
+- game metadata indexing
+- analytics infrastructure
+- event-driven architecture
+
+---
+
+# Overview
+
+NERV presents a platform for:
 
 - discovering early-stage Web3 games
 - joining playtests and viewing game details
 - tracking gamer and game leaderboards
-- viewing a player profile and progress
-- exploring live streaming style interactions
+- viewing player profiles and progression
+- exploring live gaming interactions
 - submitting games and developer support requests
 
-This makes the project useful both as:
+This makes the repository useful as both:
 
-- a product prototype for the NERV platform
-- a UI foundation for future backend and wallet integration
+- a product prototype for a decentralized gaming platform
+- a frontend foundation for future Stellar and Soroban integrations
+- a contributor-friendly open-source ecosystem project
 
-## Current State
+---
 
-This codebase is mostly frontend.
-
-What is already in place:
-
-- multi-page Next.js app using the App Router
-- polished gaming-themed UI with Tailwind styling
-- motion and transitions using Framer Motion
-- signup, login, password reset, dashboard, discovery, profile, leaderboard, live, and developer flows
-- local interactive components such as modals, chat, file upload previews, and media device controls
-
-What is not meaningfully connected yet:
-
-- no real authentication flow
-- no persistent backend or database integration
-- no API-driven content loading
-- no production wallet integration
-- no blockchain transaction logic
-- no real live-streaming backend
-
-In short: this repository currently behaves more like a working product mockup than a fully connected production app.
-
-## Tech Stack
+# Tech Stack
 
 - Next.js 15
 - React 19
@@ -53,80 +141,118 @@ In short: this repository currently behaves more like a working product mockup t
 - Lucide React
 - Font Awesome
 
-## Main Routes
+---
 
-These are the key user-facing routes currently present in the app:
+# Main Routes
 
-- `/`
-  Signup-style landing page
-- `/login`
-  Login screen
-- `/passwordreset`
-  Password reset flow
-- `/dashboard`
-  Main gamer landing page
-- `/discovery`
-  Game discovery and playtest listing
-- `/games/[slug]`
-  Dynamic game route
-- `/games/cosmic-clash`
-  Implemented game detail page
-- `/games/cosmic-clash/leaderboard`
-  Game-specific leaderboard
-- `/leaderboard`
-  General leaderboard
-- `/leaderboard/gamerleaderboard`
-  Games leaderboard page
-- `/profile`
-  Player profile and notifications
-- `/ongoing-live`
-  Ongoing live sessions list
-- `/ongoing-live/live`
-  Local live session preview and interaction page
-- `/developer`
-  Developer support form
-- `/developerforgame`
-  Game registration form
+| Route | Description |
+|---|---|
+| `/` | Landing page |
+| `/login` | Login screen |
+| `/passwordreset` | Password reset flow |
+| `/dashboard` | Main gamer dashboard |
+| `/discovery` | Game discovery and playtest listings |
+| `/games/[slug]` | Dynamic game route |
+| `/games/cosmic-clash` | Game detail page |
+| `/games/cosmic-clash/leaderboard` | Game leaderboard |
+| `/leaderboard` | General leaderboard |
+| `/leaderboard/gamerleaderboard` | Gamer rankings |
+| `/profile` | Player profile |
+| `/ongoing-live` | Live sessions |
+| `/ongoing-live/live` | Live interaction preview |
+| `/developer` | Developer support |
+| `/developerforgame` | Game registration form |
 
-## Notable Features
+---
 
-### Player-facing
+# Notable Features
 
-- dashboard hero and featured game cards
-- discovery page with categories and game states
-- game detail page for `cosmic-clash`
-- player profile with stats, testing progress, and notifications
-- leaderboard screens for players and games
+## Player Experience
 
-### Live experience
+- dashboard hero experience
+- featured game cards
+- discovery categories and filters
+- gamer profile progression
+- player and game leaderboards
+- playtest exploration
+
+---
+
+## Live Gaming Experience
 
 - local camera preview
-- local screen sharing preview
+- local screen sharing
 - mic toggle
-- fake viewer count and tipping state
+- tipping-state simulation
 - local chat sidebar
 
-Note: the live experience currently uses browser media APIs for local preview only. It is not connected to a real streaming service.
+> Note: current live functionality is browser-local only and not connected to production streaming infrastructure.
 
-### Developer-facing
+---
 
-- developer support request form
-- game registration form
-- local asset preview for uploads
+## Developer Experience
 
-## Project Structure
+- developer support request flow
+- game registration forms
+- local asset upload previews
+- onboarding-oriented UI flows
 
-```text
+---
+
+# Potential Contributor Areas
+
+This repository is intentionally structured to support future open-source contributions across multiple disciplines within the Stellar ecosystem.
+
+Potential contribution areas include:
+
+## Frontend
+
+- accessibility improvements
+- responsive optimization
+- performance optimization
+- animation systems
+- reusable component architecture
+
+## Backend
+
+- realtime systems
+- API architecture
+- indexing infrastructure
+- authentication
+- scalable game data systems
+
+## Stellar / Soroban
+
+- smart contract integrations
+- wallet interoperability
+- transaction flows
+- reward systems
+- decentralized reputation models
+- tournament contract systems
+
+## Developer Tooling
+
+- testing infrastructure
+- CI/CD pipelines
+- documentation
+- SDK utilities
+- analytics dashboards
+
+This structure makes NERV highly suitable for collaborative ecosystem development initiatives such as Drip Wave.
+
+---
+
+# Project Structure
+
+```bash
 nerv_frontend/
 ├─ public/                 # Static assets and images
 ├─ src/
 │  ├─ app/                 # App Router pages
 │  ├─ components/          # Shared UI and feature components
-│  └─ lib/                 # Small utilities
+│  └─ lib/                 # Utilities
 ├─ package.json
 └─ README.md
-```
-
 Important folders:
 
 - `src/app`
